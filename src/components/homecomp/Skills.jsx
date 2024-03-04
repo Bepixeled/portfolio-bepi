@@ -7,7 +7,7 @@ function Skills() {
   const frontend = ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS"];
   const backend = ["Node.js", "Express.js", "MongoDB", "SQL"];
   const tools = ["Git", "GitHub", "VS Code", "Netlify", "Render"];
-  const learning = ["Svelte", "Next.js", "Angular", "Vue.js", "PHP", "Flutter"];
+  const learning = ["Svelte", "Next.js", "Angular", "Vue.js", "Flutter"];
 
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -52,7 +52,7 @@ function Skills() {
           className="p-4 gap-4 flex items-center justify-center flex-grow w-full lg:flex-row flex-col"
         >
           <SkillCard title="My Frontend Skills" items={frontend} />
-          <SkillCard title="My Back'end Skills" items={backend} />
+          <SkillCard title="My Backend Skills" items={backend} />
           <SkillCard title="Tools I love to use" items={tools} />
           <SkillCard title="What I'm learning" items={learning} />
         </motion.div>
