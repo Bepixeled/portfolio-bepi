@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createClient } from "contentful";
-import * as Unicons from "@iconscout/react-unicons";
-import Markdown from "react-markdown";
+import ProjectCards from "./ProjectCards";
 
 function Projects() {
   const client = createClient({
@@ -42,46 +41,11 @@ function Projects() {
             Projects
           </h2>
         </div>
-        {projects.map((project) => {
-          return (
-            <div className="p-4 bg-rich_black-300 text-rich_black-800 rounded-xl md:max-w-[300px] overflow-hidden">
-              <h3 className="text-xl font-bold mb-2 ">
-                {project.fields.title}
-              </h3>
-              <div>
-                <Markdown>{project.fields.content}</Markdown>
-              </div>
-              <div className="flex gap-4">
-                {project.fields.images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image.fields.file.url}
-                    alt={image.fields.title}
-                    className="w-auto h-72 rounded-xl p-2"
-                  />
-                ))}
-              </div>
-              <div className="flex justify-start items-center">
-                <a
-                  href={project.fields.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2"
-                >
-                  <Unicons.UilLink />{" "}
-                </a>
-                <a
-                  href={project.fields.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2"
-                >
-                  <Unicons.UilGithub />{" "}
-                </a>
-              </div>
-            </div>
-          );
-        })}
+        <div className="flex flex-col md:flex-row gap-4 jus">
+          {projects.map((project) => (
+            <ProjectCards key={project.sys.id} project={project} />
+          ))}
+        </div>
       </div>
     </div>
   );
