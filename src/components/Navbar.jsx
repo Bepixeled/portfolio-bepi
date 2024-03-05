@@ -14,13 +14,14 @@ const navitems = [
         url: '#about'
     },
     {
-        title: 'Skills',
-        url: '#skills'
-    },
-    {
         title: 'Projects',
         url: '#projects'
     },
+    {
+        title: 'Skills',
+        url: '#skills'
+    },
+    
     {
         title: 'Blog',
         url: '#blog'

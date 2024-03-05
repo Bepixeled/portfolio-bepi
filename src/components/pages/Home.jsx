@@ -30,7 +30,7 @@ function Home() {
         ]}
         className='md:h-96 h-48  w-full bg-cover bg-center bg-no-repeat bottom-0'
         />
-        <Skills />
+        <Projects />
         <ParallaxBanner
         layers={[
           { image: 'hs-bg-bepixeled.jpg', speed: -20},
@@ -38,7 +38,7 @@ function Home() {
         ]}
         className='md:h-96 h-48  w-full bg-cover bg-no-repeat bg-center top-0'
         />
-        <Projects />
+        <Skills />
         <Blog />
     </div>
   )
